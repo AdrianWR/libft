@@ -19,13 +19,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		len2;
 	char	*join;
 
-	if (!s1 || !s1)
+	if (!s1 || !s2)
 		return (NULL);
 	i = -1;
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	if (!(join = malloc((len1 + len2) * sizeof(*join))))
-		return (0);
+		return (NULL);
 	while (s1[++i])
 		join[i] = s1[i];
 	i = -1;
