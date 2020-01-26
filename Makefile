@@ -6,23 +6,23 @@
 #    By: aroque <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 11:20:51 by aroque            #+#    #+#              #
-#    Updated: 2020/01/26 00:57:21 by aroque           ###   ########.fr        #
+#    Updated: 2020/01/26 01:44:14 by aroque           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	libft.a
+NAME		=		libft.a
 
-CC		 =	gcc
-CC_FLAGS =		-Wall	\
-			-Wextra	\
-			-Werror
+CC			=		gcc
+CC_FLAGS	=		-Wall	\
+					-Wextra	\
+					-Werror
 
 
 LD_FLAGS = 
 
-INCLUDES	=	./include
+INCLUDES	=	.
 
-SRC_DIR		= 	./src
+SRC_DIR		= 	.
 SRC		=	${SRC_DIR}/ft_memset.c		\
 			${SRC_DIR}/ft_bzero.c		\
 			${SRC_DIR}/ft_memcpy.c		\
@@ -67,7 +67,7 @@ SRC		=	${SRC_DIR}/ft_memset.c		\
 			${SRC_DIR}/ft_lstiter.c		\
 			${SRC_DIR}/ft_lstmap.c
 
-OBJ_DIR 	=	./build
+OBJ_DIR 	=	.
 OBJ		=	$(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
 
 all: $(NAME)
