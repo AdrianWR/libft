@@ -76,13 +76,13 @@ $(NAME): $(OBJ)
 	ar rcs $@ $^
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	${CC} ${CC_FLAGS} -c -I${INCLUDES} $< -o $@
+	$(CC) $(CC_FLAGS) -c -I$(INCLUDES) $< -o $@
 
 clean:
-	$(RM) ${OBJ} ${OBJ_BONUS}
+	$(RM) (OBJ)
 
 fclean: clean
-	$(RM) ${NAME}
+	$(RM) $(NAME)
 
 re: fclean all
 
