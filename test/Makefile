@@ -19,7 +19,7 @@ CC_FLAGS =	-Wall	\
 
 LD_FLAGS = 
 
-INCLUDES =	../include
+INCLUDES =	..
 
 LIB_DIR =	..
 LIB		=	${LIB_DIR}/libft.a
