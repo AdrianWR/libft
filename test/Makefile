@@ -6,7 +6,7 @@
 #    By: aroque <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 11:20:51 by aroque            #+#    #+#              #
-#    Updated: 2020/01/25 20:36:36 by aroque           ###   ########.fr        #
+#    Updated: 2020/02/15 15:01:28 by aroque           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,16 +27,11 @@ LIB		=	${LIB_DIR}/libft.a
 SRC_DIR	= 	.
 SRC		=	${SRC_DIR}/test.c
 
-OBJ_DIR =	.
-OBJ		=	$(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRC))
-
 all: ${NAME}
+	./run
 
-${NAME}: ${OBJ} ${LIB}
-	${CC} ${LD_FLAGS} $^ -o $@
-
-${OBJ_DIR}/%.o: ${SRC_DIR}/%.c
-	${CC} ${CC_FLAGS} -c $< -I${INCLUDES} -o $@
+${NAME}: ${SRC} ${LIB}
+	${CC} ${LD_FLAGS} -I${INCLUDES} $^ -o $@
 
 clean:
 	rm -f ${OBJ}
