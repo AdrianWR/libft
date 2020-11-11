@@ -1,4 +1,7 @@
 # libft
+
+[![norminette Actions Status](https://github.com/AdrianWR/libft/workflows/norminette/badge.svg)](https://github.com/AdrianWR/libft/actions)
+
 A bunch of cool functions. Some are redesigned from classic libc functions, while others were created to perform common tasks. Part of the 42 School curriculum. Enjoy :)
 
 ## Compilation
